@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE LULL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Coffee Lull</h1>
+        <nav class="navbar">
+            <div id="close-navbar" class="ri-close-line"></div>
+            <a href="index.html">Головна</a>
+            <a href="#about">Про нас</a>
+            <a href="#generator">Твій момент</a>
+            <a href="#menu">Наше меню</a>
+            <a href="#contacts">Контакти</a>
+        </nav>
+    </header>
+
+    <main>
+    <div class="hero">
+    <h2>Ласкаво просимо в Coffee Lull</h2>
+    <p class="slogan">Тут час завмирає, а думки приходять у лад.</p>
+    <a href="#menu" class="hero-btn">Обрати свій напій</a>
+    </div>
+    <hr>
+    
+    <section id="about" class="philosophy reveal">
+        <h3>Відпусти зайве</h3>
+        <p>Coffee Lull - це твоя пауза для перезавантаження. Ми створюємо простір для тих, хто
+            втомився від нескінченного шуму та гучних думок. Тут немає метушні, 
+            лише аромат свіжої кави та спокій, якого ти шукаєш.</p>
+        <div class="values-list">
+        <div class="value-item">
+            <span class="value-icon">✦</span>
+            <p><strong>Відсутність поспіху.</strong> Ми не квапимо тебе, ми чекаємо разом з тобою.</p>
+        </div>
+        <div class="value-item">
+            <span class="value-icon">✦</span>
+            <p><strong>Естетика мінімалізму.</strong> Тільки те, що справді має значення.</p>
+        </div>
+        <div class="value-item">
+            <span class="value-icon">✦</span>
+            <p><strong>Твій простір.</strong> Місце, де можна бути собою, без зайвих слів.</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="generator" class="generator-section reveal">
+        <div class="mood-box reveal">
+            <h3 class="column-subtitle">Генератор натхнення</h3>
+            <p id="mood-text">Що підказує серце?</p>
+            <p id="dessert-text"></p>
+            <div class="gen-container">
+                <button onclick="generateDrink()" class="gen-btn">Напій</button>
+                <button onclick="generatePair()" class="gen-btn main-gen">Ідеальна пара</button>
+                <button onclick="generateDessert()" class="gen-btn">Десерт</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="reveal">
+        <h3 class="section-title">Меню спокою</h3>
+        <div class="menu-container">
+            <div class="menu-column">
+                <h4 class="column-subtitle">Напої</h4>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <span class="item-name" title="Absolution - звільнення від провини; повне прощення">Absolution Dark</span>
+                        <span class="item-price">65 ₴</span>
+                        <p class="item-desc">Міцна чорна кава. Момент, коли все старе залишається позаду.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name" title="Catharsis - очищення душі через глибокі переживання">Catharsis Latte</span>
+                        <span class="item-price">80 ₴</span>
+                        <p class="item-desc">Ніжна пінка та м'який смак, що розчиняють всі тривоги.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name" title="Respite - коротка перерва від чогось важкого або неприємного.">Respite Cappuccino</span>
+                        <span class="item-price">75 ₴</span>
+                        <p class="item-desc">Ідеальний баланс для моменту спокою.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name" title="Serenity - стан спокою, тиші та безтурботності">Serenity Tea</span>
+                        <span class="item-price">70 ₴</span>
+                        <p class="item-desc">Трав'яний збір з нотами лаванди. Коли потрібно просто дихати.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name" title="Ethereal - щось неземне, легке, повітряне та витончене">Ethereal Cocoa</span>
+                        <span class="item-price">85 ₴</span>
+                        <p class="item-desc">Густе какао з хмаринкою маршмеллоу. Невагомість у кожному ковтку.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name" title="Essence - суть, найважливіша основа чого-небудь">Essence Flat White</span>
+                        <span class="item-price">80 ₴</span>
+                        <p class="item-desc">Подвійна порція кави з тонким шаром молока. Сама суть бадьорості.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-column">
+                <h4 class="column-subtitle">Десерти</h4>
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <span class="item-name" title="Oblivion - стан, коли повністю забуваєш про все навколо">Oblivion Tart</span>
+                        <span class="item-price">110 ₴</span>
+                        <p class="item-desc">Шоколадна основа з легким банановим ганашем. Дозволь собі забути про все.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name" title="Mirage - щось ілюзорне, що здається реальним лише на мить">Mirage Cheesecake</span>
+                        <span class="item-price">125 ₴</span>
+                        <p class="item-desc">Ніжний чізкейк з вишневим прошарком, такий легкий, що тане швидше за твої сумніви.</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name" title="Echo - відголосок минулого, що залишає приємний спогад">Echo Macarons</span>
+                        <span class="item-price">40/шт ₴</span>
+                        <p class="item-desc">Набір з трьох смаків: шоколад, полуниця, маракуйя-персик. Маленьке ехо радості</p>
+                    </div>
+                    <div class="menu-item">
+                        <span class="item-name" title="Solace - втіха, полегшення або підтримка у важку хвилину">Solace Brownie</span>
+                        <span class="item-price">95 ₴</span>
+                        <p class="item-desc">Тепле шоколадне тістечко. Твоя тиха підтримка після складного дня.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section reveal">
+    <h3 class="column-subtitle">Твій вибір сьогодні</h3>
+    <div class="mood-box">
+    <form id="orderForm">
+        <input type="text" id="name" placeholder="Твоє ім'я" required class="order-input">
+        
+            <div class="selection-row">
+                <select id="drink-selection" class="order-input">
+                    <option value="" selected>Обери напій (необов'язково)</option>
+                    <option>Absolution Dark</option>
+                    <option>Catharsis Latte</option>
+                    <option>Respite Cappuccino</option>
+                    <option>Serenity Tea</option>
+                    <option>Ethereal Cocoa</option>
+                    <option>Cold Brew</option>
+                </select>
+
+                <select id="dessert-selection" class="order-input">
+                    <option value="" selected>Обери десерт (необов'язково)</option>
+                    <option>Oblivion Tart</option>
+                    <option>Mirage Cheesecake</option>
+                    <option>Echo Macarons</option>
+                    <option>Solace Brownie</option>
+                </select>
+            </div>
+
+            <div class="payment-row">
+                <input type="text" id="card" placeholder="Номер картки (0000 0000 0000 0000)" class="order-input">
+                <input type="text" id="cvv" placeholder="CVV" class="order-input" maxlength="3">
+            </div>
+
+            <textarea id="order-comment" placeholder="Твій коментар для бариста (наприклад, без цукру чи дуже гарячий...)" class="order-input order-textarea"></textarea>
+            <p class="contact-note">Замовлення буде готове за 10 хвилин у кав'ярні на вул. Тихій, 174.</p>
+            <button type="submit" class="hero-btn">Сплатити та замовити</button>
+        </form>
+        <p id="orderResponse" style="margin-top: 20px; display: none;"></p>
+    </div>
+</section>
+
+    <section id="contacts" class="contacts reveal">
+        <h3>Знайди своє затишшя</h3>
+        <div class="contacts-info">
+        <p>Вулиця Тиха, 174</p>
+        <p>Пн-Нд: 08:00 - 22:00</p>
+        <div class="socials">
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Telegram</a>
+        </div>
+        <p class="contact-note">Маємо вініловий програвач та завжди раді твоїм чотирилапим друзям.</p>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://t.me" target="_blank">Telegram</a>
+        </div>
+        <p>&copy; 2026 Coffee Lull. Створено з душею.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
