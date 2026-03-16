@@ -114,11 +114,11 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
         return;
     }
 
-    if (cardNumber.length < 16 || cvvNumber.length < 3 || (cardNumber.length > 0 && cvvNumber < 3)) {
+    if (cardNumber.length !== 16 || cvvNumber.length !== 3) {
         setTimeout(() => {
             response.style.display = 'block';
             response.style.color = '#ff6b6b';
-            if (cardNumber.length < 16) { response.innerText = `${name}, перевір номер картки - там бракує цифр.`}
+            if (cardNumber.length !== 16) { response.innerText = `${name}, номер картки має складатися з 16 цифр.`}
             else { response.innerText = `${name}, CVV код має складатися з трьох цифр.`; }
             response.style.opacity = 1;
         }, 100);
