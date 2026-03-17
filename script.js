@@ -91,8 +91,8 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     const cvv = document.getElementById('cvv').value;
     const comment = document.getElementById('order-comment').value;
     const response = document.getElementById('orderResponse');
-    const cardNumber = card.replace(/\s+/g, '');
-    const cvvNumber = cvv.replace(/\s+/g, '');
+    const cardNumber = card.replace(/\D+/g, '');
+    const cvvNumber = cvv.replace(/\D+/g, '');
     response.style.opacity = 0;
 
     if (!drink && !dessert) {
